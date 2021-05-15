@@ -1,0 +1,2 @@
+# Introduction-to-computing-assignment-ICG511S
+To provide assistance to Ayesha Beauty Creation by optimizing business operations, through the development of a software application. As said software application will be able to assist in the following three aspects of business operations. Creating value for the business measured in financial returns per product/service portfolio; Enabling efficiency in human resource information; and lastly developing customer relationship management database to serve as a sales tool
