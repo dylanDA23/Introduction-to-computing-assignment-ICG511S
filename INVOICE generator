@@ -1,0 +1,129 @@
+Module name: header
+
+date={month,day,year}
+due_date={month,day,year}
+
+START
+
+Initialize header to 57
+inputLogo()
+display Logo
+enterHeading()
+display title
+inputInvoiceDetails()
+display invoice_number
+display date
+display due_date
+billFrom()
+display company_name
+display adress
+display tel_numb
+display email
+display webisite
+billTo()
+display name
+display adress
+display email
+display tel_numb
+
+END 
+
+inputLogo(){
+    Prompt for "Add your logo"
+    Get Logo
+    if(logo>200X50)then
+        display"file not supported"
+    else
+    Return Logo
+    endif
+}
+
+enterHeading(){
+    Prompt for "write title"
+    Get title
+    Return title
+}
+
+inputInvoiceDetails(){
+    Initialize invoice_number to NV100
+    date={month,day,year}
+    due_date={month,day,year}
+    Get invoice_number
+    Return invoice_number
+    Prompt for "date"
+    Get date
+    Return date
+    Prompt for"due date"
+    Get due_date
+    Return due_date
+}
+
+billFrom(){ 
+    adress={town,street,erf}
+    Prompt for"add company name"
+    Get company_name
+    Return company_name
+    Prompt for "enter adress"
+    Get adress
+    Return adress
+    Prompt for "telephone_number"
+    Get tel_numb
+    Return tel_numb
+    Prompt for"add email adress"
+    Get email
+    Return email
+    Prompt for " enter webisite URL"
+    Get webisite
+    Return webisite
+}
+
+billTo(){ 
+    adress={town,street,erf}
+    Prompt for "add client name"
+    Get name
+    Return name
+    Prompt for "enter Clien adress"
+    Get adress
+    Return adress
+    Prompt for"input client email"
+    Get email
+    Return email
+    Prompt for "add client telephone_number"
+    Get tel_numb
+    Return tel_numb
+}
+
+
+Module Name: Table
+
+invoice_table={description,quantity,price,total}
+
+START
+
+inputData()
+display invoice_table
+
+END
+
+inputData(){
+    initialize invoice_table to 4X2
+    Prompt "add row"
+    if (response=="yes") then
+        invoice_table= 4X(2+1)
+    endif
+    Prompt "write item description"
+    Get invoice_table.description
+    Prompt "enter item quantity"
+    Get invoice_table.quantity
+    Prompt "input item price"
+    Get invoice_table.price
+    if (invoice_table.quantity>1)then
+        invoice_table.total= invoice_table.price*invoice_table.quantity
+    endif
+    Get invoice_table.total
+    return invoice_table
+}
+
+Module name:// Footer
+
+
