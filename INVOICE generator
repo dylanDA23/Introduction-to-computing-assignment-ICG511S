@@ -1,5 +1,17 @@
-Module name: header
+Invoice Generator
 
+START
+
+import Header
+start Header
+import Table
+start Table
+import Footer
+Start Footer
+
+END
+
+Header
 date={month,day,year}
 due_date={month,day,year}
 
@@ -94,8 +106,8 @@ billTo(){
 }
 
 
-Module Name: Table
 
+Table
 invoice_table={description,quantity,price,total}
 
 START
@@ -106,10 +118,11 @@ display invoice_table
 END
 
 inputData(){
-    initialize invoice_table to 4X2
-    Prompt "add row"
+    invoice_table
+    initialize invoice_table to 4 by 2
+    Prompt "do you want to add  row"
     if (response=="yes") then
-        invoice_table= 4X(2+1)
+        invoice_table= 4 by (2+1)
     endif
     Prompt "write item description"
     Get invoice_table.description
@@ -124,6 +137,59 @@ inputData(){
     return invoice_table
 }
 
-Module name:// Footer
+
+Footer
+sub_total
+sales_tax
+
+START
+
+initialize Footer to 57
+calculateSubTotal()
+display sub_total
+calculateSalesTax()
+dispay sales_tax
+calutlateTotalDue()
+dispay total_due
+writeTermConditions()
+display term_conditions
+
+END
+
+calutlateSubTotal(){
+    set total_one[a][4] 
+    set total_two[b][4]
+    set a= 1
+    set b= 2
+    initialize sub_total= 0
+    read invoice_table
+    DOWHILE not EOF
+        addition= total_one[a][4] + total_two[b][4]
+        sub_total= sub_total + addition
+        increment a  by 2
+        increment b by 2
+        read invoice_table
+    ENDDO
+    Return sub_total
+
+}
+
+calculateSalesTax(){
+    sales_tax= (10/100) * sub_total
+    sales_tax= sub_total - sales_tax
+    Return sales_tax
+}
+
+calutlateTotalDue(){
+    total_due= sub_total + sales_tax
+    Return total_due
+}
+
+
+writeTermConditions(){
+    Prompt for "write terms and conditioins"
+    get term_conditions
+    Return term_conditions
+}
 
 
