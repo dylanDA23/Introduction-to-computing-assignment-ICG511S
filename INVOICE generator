@@ -3,11 +3,8 @@ Invoice Generator
 START
 
     import Header
-    start Header
     import Table
-    start Table
     import Footer
-    Start Footer
 
 END
 
