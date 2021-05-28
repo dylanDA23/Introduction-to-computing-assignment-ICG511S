@@ -2,12 +2,12 @@ Invoice Generator
 
 START
 
-import Header
-start Header
-import Table
-start Table
-import Footer
-Start Footer
+    import Header
+    start Header
+    import Table
+    start Table
+    import Footer
+    Start Footer
 
 END
 
@@ -17,26 +17,26 @@ due_date={month,day,year}
 
 START
 
-Initialize header to 57
-inputLogo()
-display Logo
-enterHeading()
-display title
-inputInvoiceDetails()
-display invoice_number
-display date
-display due_date
-billFrom()
-display company_name
-display adress
-display tel_numb
-display email
-display webisite
-billTo()
-display name
-display adress
-display email
-display tel_numb
+    Initialize header to 57
+    inputLogo()
+    display Logo
+    enterHeading()
+    display title
+    inputInvoiceDetails()
+    display invoice_number
+    display date
+    display due_date
+    billFrom()
+    display company_name
+    display adress
+    display tel_numb
+    display email
+    display webisite
+    billTo()
+    display name
+    display adress
+    display email
+    display tel_numb
 
 END 
 
@@ -112,8 +112,8 @@ invoice_table={description,quantity,price,total}
 
 START
 
-inputData()
-display invoice_table
+    inputData()
+    display invoice_table
 
 END
 
@@ -144,27 +144,27 @@ sales_tax
 
 START
 
-initialize Footer to 57
-calculateSubTotal()
-display sub_total
-calculateSalesTax()
-dispay sales_tax
-calutlateTotalDue()
-dispay total_due
-writeTermConditions()
-display term_conditions
+    initialize Footer to 57
+    calculateSubTotal()
+    display sub_total
+    calculateSalesTax()
+    dispay sales_tax
+    calutlateTotalDue()
+    dispay total_due
+    writeTermConditions()
+    display term_conditions
 
 END
 
 calutlateSubTotal(){
     set total_one[a][4] 
     set total_two[b][4]
-    set a= 1
-    set b= 2
+    set a= 0
+    set b= 1
     initialize sub_total= 0
     read invoice_table
     DOWHILE not EOF
-        addition= total_one[a][4] + total_two[b][4]
+        addition= [a]+[b]
         sub_total= sub_total + addition
         increment a  by 2
         increment b by 2
