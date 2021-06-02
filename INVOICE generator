@@ -1,4 +1,4 @@
-Invoice Generator
+Invoice Generato
 
 START
 
@@ -16,7 +16,7 @@ START
 
     Initialize header to 57
     inputLogo()
-    display Logo
+    display logo
     enterHeading()
     display title
     inputInvoiceDetails()
@@ -154,14 +154,14 @@ START
 END
 
 calutlateSubTotal(){
-    set total_one[a][4] 
-    set total_two[b][4]
+    set total_one[a][3] 
+    set total_two[b][3]
     set a= 0
     set b= 1
     initialize sub_total= 0
     read invoice_table
     DOWHILE not EOF
-        addition= [a]+[b]
+        addition= total_one[a]+total_two[b]
         sub_total= sub_total + addition
         increment a  by 2
         increment b by 2
