@@ -1,8 +1,8 @@
 START
  DOWHILE(records exist)
-  prompt employeeID
+  prompt for employeeID
   get employeeID
-  prompt employeeName and employeeSurname
+  prompt for employeeName and employeeSurname
   get employeeName and employeeSurname
   prompt typeOfLeave
   get typeOfLeave
