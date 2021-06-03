@@ -12,4 +12,8 @@ START
 END
 
 FUNCTION
-digitalReciept(employeeNameandSurname,typeOfleave,leaveDuration)
+digitalReciept(employeeNameandSurname,typeOfleave,leaveDuration){
+Print employeeNameandSurname
+Print typeOfleave
+Print leaveDuration
+}
