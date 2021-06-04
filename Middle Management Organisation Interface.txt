@@ -4,30 +4,12 @@
         Import Invoice Generator
         Import Leave Application
         Import Relation Database
-        chooseModule()
-        module_start
 
-    CASE OF chooseModule:
-    1. Invoice Generator
-    2.Leave Application
-    3. Relation Database
-
-
-
+        CASE OF (Module)
+            1: Invoice Generator
+            2: Leave Application
+            3: Relation Database
+        ENDCASE
     END
 
-    chooseModule(){
-        if  (Invoice Generator) then
-            START Invoice Generator
-        else
-            if (Leave Application) then
-                START Leave  Application
-            else
-                if (Relation Database) then
-                    START Relation Database 
-                endif
-            endif
-        endif
-        END
-    } ENDFUNCTIO
-        
+    
