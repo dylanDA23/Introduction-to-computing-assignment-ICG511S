@@ -1,0 +1,19 @@
+START
+ DOWHILE(records exist)
+  prompt for employeeID
+  get employeeID
+  prompt for employeeName and employeeSurname
+  get employeeName and employeeSurname
+  prompt typeOfLeave
+  get typeOfLeave
+  prompt for leaveDuration
+  get leaveDuration
+  print digitalReciept()
+END
+
+FUNCTION
+digitalReciept(employeeNameandSurname,typeOfleave,leaveDuration){
+Print employeeNameandSurname
+Print typeOfleave
+Print leaveDuration
+}
