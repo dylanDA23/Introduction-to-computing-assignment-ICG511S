@@ -1,0 +1,195 @@
+Invoice Generator
+
+START
+
+    import Header
+    import Table
+    import Footer
+
+END
+
+Header
+date={month,day,year}
+due_date={month,day,year}
+
+START
+
+    Initialize header to 57
+    inputLogo()
+    display logo
+    enterHeading()
+    display title
+    inputInvoiceDetails()
+    display invoice_number
+    display date
+    display due_date
+    billFrom()
+    display company_name
+    display adress
+    display tel_numb
+    display email
+    display webisite
+    billTo()
+    display name
+    display adress
+    display email
+    display tel_numb
+
+END 
+
+inputLogo(){
+    Prompt for "Add your logo"
+    Get Logo
+    if(logo>200X50)then
+        display"file not supported"
+    else
+    Return Logo
+    endif
+}
+
+enterHeading(){
+    Prompt for "write title"
+    Get title
+    Return title
+}
+
+inputInvoiceDetails(){
+    Initialize invoice_number to NV100
+    date={month,day,year}
+    due_date={month,day,year}
+    Get invoice_number
+    Return invoice_number
+    Prompt for "date"
+    Get date
+    Return date
+    Prompt for"due date"
+    Get due_date
+    Return due_date
+}
+
+billFrom(){ 
+    adress={town,street,erf}
+    Prompt for"add company name"
+    Get company_name
+    Return company_name
+    Prompt for "enter adress"
+    Get adress
+    Return adress
+    Prompt for "telephone_number"
+    Get tel_numb
+    Return tel_numb
+    Prompt for"add email adress"
+    Get email
+    Return email
+    Prompt for " enter webisite URL"
+    Get webisite
+    Return webisite
+}
+
+billTo(){ 
+    adress={town,street,erf}
+    Prompt for "add client name"
+    Get name
+    Return name
+    Prompt for "enter Clien adress"
+    Get adress
+    Return adress
+    Prompt for"input client email"
+    Get email
+    Return email
+    Prompt for "add client telephone_number"
+    Get tel_numb
+    Return tel_numb
+}
+
+
+
+Table
+invoice_table={description,quantity,price,total}
+
+START
+
+    inputData()
+    display invoice_table
+
+END
+
+inputData(){
+    invoice_table
+    initialize invoice_table to 4 by 2
+    Prompt "do you want to add  row"
+    if (response=="yes") then
+        invoice_table= 4 by (2+1)
+    endif
+    Prompt "write item description"
+    Get invoice_table.description
+    Prompt "enter item quantity"
+    Get invoice_table.quantity
+    Prompt "input item price"
+    Get invoice_table.price
+    if (invoice_table.quantity>1)then
+        invoice_table.total= invoice_table.price*invoice_table.quantity
+    endif
+    Get invoice_table.total
+    return invoice_table
+}
+
+
+Footer
+sub_total
+sales_tax
+
+START
+
+    initialize Footer to 57
+    calculateSubTotal()
+    display sub_total
+    calculateSalesTax()
+    dispay sales_tax
+    calutlateTotalDue()
+    dispay total_due
+    writeTermConditions()
+    display term_conditions
+
+END
+
+calutlateSubTotal(){
+    set total_one[a][3] 
+    set total_two[b][3]
+    set a= 0
+    set b= 1
+    initialize sub_total= 0
+    read invoice_table
+    DOWHILE not EOF
+        addition= total_one[a]+total_two[b]
+        sub_total= sub_total + addition
+        increment a  by 2
+        increment b by 2
+        read invoice_table
+    ENDDO
+    Return sub_total
+
+}
+
+calculateSalesTax(){
+    sales_tax= (10/100) * sub_total
+    sales_tax= sub_total - sales_tax
+    Return sales_tax
+}
+
+calutlateTotalDue(){
+    total_due= sub_total + sales_tax
+    Return total_due
+}
+
+
+writeTermConditions(){
+    Prompt for "write terms and conditioins"
+    get term_conditions
+    Return term_conditions
+}
+
+
+
+
+
