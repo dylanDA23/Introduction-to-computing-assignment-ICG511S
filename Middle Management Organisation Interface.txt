@@ -201,8 +201,3 @@ writeTermConditions(){
     get term_conditions
     Return term_conditions
 }
-
-
-
-
-
