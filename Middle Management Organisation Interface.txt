@@ -14,11 +14,9 @@ END
 Invoice Generator
 
 START
-
     import Header
     import Table
     import Footer
-
 END
 
 Header
@@ -26,7 +24,6 @@ date={month,day,year}
 due_date={month,day,year}
 
 START
-
     Initialize header to 57
     inputLogo()
     display logo
@@ -47,7 +44,6 @@ START
     display adress
     display email
     display tel_numb
-
 END 
 
 inputLogo(){
@@ -115,16 +111,12 @@ billTo(){
     Return tel_numb
 }
 
-
-
 Table
 invoice_table={description,quantity,price,total}
 
 START
-
     inputData()
     display invoice_table
-
 END
 
 inputData(){
@@ -147,13 +139,11 @@ inputData(){
     return invoice_table
 }
 
-
 Footer
 sub_total
 sales_tax
 
 START
-
     initialize Footer to 57
     calculateSubTotal()
     display sub_total
@@ -163,7 +153,6 @@ START
     dispay total_due
     writeTermConditions()
     display term_conditions
-
 END
 
 calutlateSubTotal(){
@@ -201,3 +190,106 @@ writeTermConditions(){
     get term_conditions
     Return term_conditions
 }
+
+
+Customer Relation Database
+Start
+Import Stock Analyses
+Import Customer Relation
+Import Customer re
+End
+
+Stock Proccesing
+1.	Start
+ Display = log in
+   Display the amount of stock available  
+IF stock runs low than prompt = Reorder new item
+Else 
+   If (stock > 50) then
+Get invoice
+Print invoice
+End if
+End if
+End
+
+Customer Relation
+Start
+if Login Successful
+Display (DashBoard)
+if chooses Goods
+Display (View & Add Goods)
+if selects View Process
+Display (Detail Goods)
+end
+else
+Update Goods
+end
+else if chooses Category Goods
+Display (View & add Category Goods)
+if selects View Process
+Display (Category Goods)
+end
+else
+Update Category Goods
+end
+else if chooses promo
+Display (View & Add Promo)
+if selects View Progress
+Display (Detail Promo)
+end
+else
+Update Promo
+end
+else if chooses Customer Order
+Display (View Customer)
+end
+  
+else if chooses Driver
+Display (View Customer)
+end
+  
+else if chooses Report
+Display(View Customer)
+end
+  
+else
+Login Again
+ endif
+endif
+endif
+End
+
+Employee Relation
+Start
+declare employee;
+set employee to first_employee;
+while(employee exists is true)
+   set hours=worked_hours(employee,last period);
+   if hours>40
+       set overtime=hours-40;
+   else
+       set overtime=0;
+   set hours=hours+overtime*1.5;
+   set salary=hourly_rate(employee,hour)*hours;
+   print_cheque(employee,salary);
+   set employee to next_employee;
+endif
+
+
+
+Leave Application
+START 
+DOWHILE(records exist)
+2    prompt employeeNameandSurname
+      get employeeNameandSurname
+3    prompt employeeId
+      get employeeId
+4    prompt typeOfleave
+      get typeOfleave
+5 prompt Leaveduration
+     get leaveDuration
+6 PRINT Digital_reciept()
+END
+
+Function
+digitalReceipt(employeeNameandSurname, typeOfleave)
