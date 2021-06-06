@@ -35,7 +35,6 @@ The main goal of this Module of the Application being able to quickly record and
 By automating the  recording of employee details with regards to leave. 
 For instance, employee name, surname, id and type of leave.
 
- Through various singular functions within this module/program. As shown in the hierarchy structure below:
 
 
 
