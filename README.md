@@ -35,6 +35,12 @@ The main goal of this Module of the Application being able to quickly record and
 By automating the  recording of employee details with regards to leave. 
 For instance, employee name, surname, id and type of leave.
 
+Contributors:
 
+Dylan Diergaardt (220048878)
+Panduleni Joseph (219077363) 
+Martin Nakale (221044434)
+Mbitjita Kurija (22111638)
+Shandimba Haingura (221074813)
 
 
